@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+	<identifier>VGPFabricsNoLoom</identifier>
+	<version>0.1.0.0</version>
+	<dependencies>
+        <li>VGPGardenFabrics</li>
+    </dependencies>
+	<showCrossPromotions>true</showCrossPromotions>
+    <manifestUri>https://raw.githubusercontent.com/Maaxar/VGPFabricsNoLoom/master/About/Manifest.xml</manifestUri>
+    <downloadUri>https://github.com/Maaxar/VGPFabricsNoLoom/releases/latest</downloadUri>
+</Manifest>
