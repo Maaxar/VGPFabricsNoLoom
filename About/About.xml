@@ -9,7 +9,7 @@
 	<description>
 		Removes the Loom and Electric Loom from VGP Garden Fabrics and moves the recipes to the tailoring benches.
 		
-		Works for both the Full and Simplified versions VGP Garden Fabrics.
+		Works for both the Full and Simplified versions VGP Garden Fabrics. Should be loaded after VGP Garden Fabrics.
 	</description>
 </ModMetaData>
 
