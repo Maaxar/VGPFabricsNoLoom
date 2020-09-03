@@ -37,8 +37,8 @@
 							<li>ElectricTailoringBench</li>
 						</recipeUsers>
 					</value>
-				</li>	
-				
+				</li>
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "MakeHempCloth"]/recipeUsers</xpath>
 					<value>
@@ -78,7 +78,7 @@
 						</recipeUsers>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]</xpath>
 					<value>
@@ -97,7 +97,7 @@
 							<li>ElectricTailoringBench</li>
 						</recipeUsers>
 					</value>
-				</li>				
+				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "Makeblendedcloth"]/recipeUsers</xpath>
@@ -117,20 +117,21 @@
 							<li>ElectricTailoringBench</li>
 						</recipeUsers>
 					</value>
-				</li>		
-				
+				</li>
+
 				<!-- Remove Loom WorkGiverDef -->
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/WorkGiverDef[defName="DoBillsTableLoom"]</xpath>
 				</li>
-	
+
+				<!-- Remove Looms -->
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ThingDef[defName="TableLoom"]</xpath>
 				</li>
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ThingDef[defName="TableElecLoom"]</xpath>
 				</li>
-				
+
 			</operations>
 		</match>
 	</Operation>
