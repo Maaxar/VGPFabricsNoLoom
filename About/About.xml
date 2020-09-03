@@ -3,13 +3,13 @@
 	<name>VGP Garden Fabrics (No Loom Patch)</name>
 	<author>Maaxar</author>
 	<supportedVersions>
-		<li>1.0</li>
-		<li>1.1</li>
 		<li>1.2</li>		
 	</supportedVersions>
 	<packageId>Maaxar.VGPGardenFabrics.NoLoomPatch</packageId>
 	<description>
-		Removes the Loom and Electric Loom from VGP Garden Fabrics and moves the recipes to the tailoring benches. Works for both the regular and Simplified versions VGP Garden Fabrics.
+		Removes the Loom and Electric Loom from VGP Garden Fabrics and moves the recipes to the tailoring benches.
+		
+		Works for both the Full and Simplified versions VGP Garden Fabrics.
 	</description>
 </ModMetaData>
 
