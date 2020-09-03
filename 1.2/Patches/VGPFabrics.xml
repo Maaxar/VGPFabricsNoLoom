@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+	<!-- Change Recipes to use tailoring benches only -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>VGP Garden Fabrics Simplified</li>
+			<li>VGP Garden Fabrics</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-
-				<!-- Change Recipes to use tailoring benches only -->
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "Make_Patchleather"]/recipeUsers</xpath>
@@ -20,6 +19,26 @@
 					</value>
 				</li>
 
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "MakeCloth"]</xpath>
+					<value>
+						<recipeUsers>
+							<li>HandTailoringBench</li>
+							<li>ElectricTailoringBench</li>
+						</recipeUsers>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "MakeLinen"]</xpath>
+					<value>
+						<recipeUsers>
+							<li>HandTailoringBench</li>
+							<li>ElectricTailoringBench</li>
+						</recipeUsers>
+					</value>
+				</li>	
+				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "MakeHempCloth"]/recipeUsers</xpath>
 					<value>
@@ -51,6 +70,16 @@
 				</li>
 
 				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "MakeDevilstrand"]</xpath>
+					<value>
+						<recipeUsers>
+							<li>HandTailoringBench</li>
+							<li>ElectricTailoringBench</li>
+						</recipeUsers>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]</xpath>
 					<value>
 						<recipeUsers>
@@ -68,7 +97,7 @@
 							<li>ElectricTailoringBench</li>
 						</recipeUsers>
 					</value>
-				</li>
+				</li>				
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "Makeblendedcloth"]/recipeUsers</xpath>
@@ -88,21 +117,20 @@
 							<li>ElectricTailoringBench</li>
 						</recipeUsers>
 					</value>
-				</li>
-
+				</li>		
+				
 				<!-- Remove Loom WorkGiverDef -->
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/WorkGiverDef[defName="DoBillsTableLoom"]</xpath>
 				</li>
-
-				<!-- Remove Looms -->
+	
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ThingDef[defName="TableLoom"]</xpath>
 				</li>
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ThingDef[defName="TableElecLoom"]</xpath>
 				</li>
-
+				
 			</operations>
 		</match>
 	</Operation>
