@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Change Recipes to use tailoring benches only -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Fabrics Simplified</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[
+						defName = "Make_Patchleather" or 
+						defName = "Make_PatchleatherBulk" or 
+						defName = "MakeHempCloth" or 
+						defName = "MakeHempClothBulk" or
+						defName = "MakePlasteelThread" or
+						defName = "Makeblendedwool" or
+						defName = "MakeblendedwoolBulk" or					
+						defName = "Makeblendedcloth" or
+						defName = "MakeblendedclothBulk" or						
+						defName = "SalvageApparel"]/recipeUsers
+					</xpath>
+					<value>
+						<recipeUsers>
+							<li>HandTailoringBench</li>
+							<li>ElectricTailoringBench</li>
+						</recipeUsers>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[
+						defName = "MakeSynthreadCloth" or 
+						defName = "MakeSynthreadClothBulk" or
+						defName = "MakeHyperweaveCloth" or
+						defName = "MakeHyperweaveClothBulk"]
+					</xpath>
+					<value>
+						<recipeUsers>
+							<li>HandTailoringBench</li>
+							<li>ElectricTailoringBench</li>
+						</recipeUsers>
+					</value>
+				</li>
+
+				<!-- Add Research Prerequisite for Plasteel Thread recipe since it is useless without the Synthread recipe -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "MakePlasteelThread"]</xpath>
+					<value>
+						<researchPrerequisite>VG_ClothI</researchPrerequisite>
+					</value>
+				</li>
+
+				<!-- Remove Loom WorkGiverDef -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/WorkGiverDef[defName="DoBillsTableLoom"]</xpath>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="TableLoom"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="TableElecLoom"]</xpath>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
